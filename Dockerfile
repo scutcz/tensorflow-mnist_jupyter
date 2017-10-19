@@ -39,6 +39,5 @@ RUN pip3 --no-cache-dir install Pillow \
 
 EXPOSE 8888
 
-COPY run_jupyter.sh /
 
-CMD ["/run_jupyter.sh", "--allow-root"]
+CMD ["jupyter notebook '$@'", "--allow-root"]
